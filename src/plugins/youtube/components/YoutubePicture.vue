@@ -1,5 +1,5 @@
 <template>
-  <picture>
+  <picture class="youtube-picture">
     <source
       v-for="version in versions"
       :key="version"
@@ -13,7 +13,7 @@
       type="image/jpeg"
     >
     <img
-      class="youtube__media"
+      class="youtube-picture__media"
       :src="`${host}/vi/${id}/${defaultVersion}.jpg`"
       :alt="name"
     >
@@ -25,7 +25,6 @@ export default {
   data() {
     return {
       host: 'https://i.ytimg.com',
-      defaultVersion: 'maxresdefault',
       versions: [
         'maxresdefault',
         'sddefault',
@@ -44,7 +43,23 @@ export default {
       type: String,
       required: true,
     },
+    defaultVersion: {
+      type: String,
+      default: 'maxresdefault',
+    },
   },
   name: 'youtube-picture',
 };
 </script>
+
+<style lang="stylus">
+.youtube-picture
+  &__media
+    position absolute
+    top 50%
+    left 0
+    transform translateY(-50%)
+    width 100%
+    min-height 100%
+    border none
+</style>

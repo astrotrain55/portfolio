@@ -114,14 +114,6 @@ export default {
     left 0
     width 100%
     height 100%
-  &__media
-    position absolute
-    top 50%
-    left 0
-    transform translateY(-50%)
-    width 100%
-    min-height 100%
-    border none
   &__button
     position absolute
     top 50%
