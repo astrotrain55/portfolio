@@ -1,5 +1,5 @@
 import {
-  ApplicationConfig,
+  type ApplicationConfig,
   inject,
   provideAppInitializer,
   provideBrowserGlobalErrorListeners,
@@ -21,6 +21,6 @@ export const appConfig: ApplicationConfig = {
       const particlesService = inject(NgParticlesService);
       return particlesService.init(loadSlim);
     }),
-    { provide: ANALYTICS_CONFIG, useValue: { ymId: environment.YandexMetrikaId } },
+    { provide: ANALYTICS_CONFIG, useValue: { ymId: environment.YM_ID } },
   ],
 };

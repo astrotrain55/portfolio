@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { NgxParticlesModule } from '@tsparticles/angular';
 import { Header } from './components/header/header';
@@ -8,7 +8,6 @@ import { Header } from './components/header/header';
   imports: [RouterOutlet, NgxParticlesModule, Header],
   templateUrl: './app.html',
   styleUrl: './app.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class App {
   public particlesOptions = {

@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, input, output } from '@angular/core';
+import { Component, input, output } from '@angular/core';
 import { UiIcon } from '../ui-icon/ui-icon';
 import { TrackClickDirective } from '../../track-click.directive';
 
@@ -7,7 +7,6 @@ import { TrackClickDirective } from '../../track-click.directive';
   imports: [TrackClickDirective, UiIcon],
   templateUrl: './project-filter.html',
   styleUrl: './project-filter.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectFilter {
   public angularOnly = input.required<boolean>();

@@ -1,15 +1,14 @@
-import { ChangeDetectionStrategy, Component, inject, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { UiIcon } from '../ui-icon/ui-icon';
 import { TrackClickDirective } from '../../track-click.directive';
-import { ThemeService, Theme } from '../../services/theme.service';
+import { ThemeService, type Theme } from '../../services/theme.service';
 
 @Component({
   selector: 'app-header',
   imports: [RouterLink, UiIcon, TrackClickDirective],
   templateUrl: './header.html',
   styleUrl: './header.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class Header {
   public themeService = inject(ThemeService);

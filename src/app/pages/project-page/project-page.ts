@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, computed, inject, OnInit } from '@angular/core';
+import { Component, computed, inject, OnInit } from '@angular/core';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { toSignal } from '@angular/core/rxjs-interop';
@@ -11,7 +11,6 @@ import { ProjectDetail } from '../../components/project-detail/project-detail';
   imports: [ProjectDetail, RouterLink],
   templateUrl: './project-page.html',
   styleUrl: './project-page.scss',
-  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class ProjectPage implements OnInit {
   private readonly route = inject(ActivatedRoute);

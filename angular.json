@@ -1,6 +1,10 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "version": 1,
+  "cli": {
+    "analytics": false,
+    "packageManager": "npm"
+  },
   "newProjectRoot": "projects",
   "projects": {
     "projects": {
@@ -8,7 +12,6 @@
       "schematics": {
         "@schematics/angular:component": {
           "style": "scss",
-          "changeDetection": "OnPush",
           "skipTests": true
         },
         "@schematics/angular:class": {
@@ -61,6 +64,7 @@
           },
           "configurations": {
             "production": {
+              "outputMode": "static",
               "budgets": [
                 {
                   "type": "initial",
@@ -99,16 +103,9 @@
               "buildTarget": "projects:build:development"
             }
           },
-          "options": {
-            "allowedHosts": ["localhost", "192.168.0.104"]
-          },
           "defaultConfiguration": "development"
         }
       }
     }
-  },
-  "cli": {
-    "packageManager": "npm",
-    "analytics": false
   }
 }

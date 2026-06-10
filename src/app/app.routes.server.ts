@@ -1,4 +1,4 @@
-import { RenderMode, ServerRoute } from '@angular/ssr';
+import { RenderMode, type ServerRoute } from '@angular/ssr';
 import { urls } from '../projects';
 
 export const serverRoutes: ServerRoute[] = [
